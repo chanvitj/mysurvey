@@ -1,4 +1,4 @@
-from pywebio import start_server
+from pywebio import start_server, session
 from pywebio.input import *
 #from pywebio.input import input, NUMBER, TEXT, input_group, actions, checkbox
 from pywebio.output import put_html, popup, put_buttons, close_popup, put_text, put_image
@@ -10,6 +10,8 @@ import os
 mongoDBString = os.environ['MONGODB_STRING']
 mongbDBName = os.environ['MONGODB_DBNAME']
 mongoDBCollection =os.environ['MONGODB_COLLECTIONNAME']
+
+session.set_env(title="Get Survey Result")
 
 def checkEmail(email):
     regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
