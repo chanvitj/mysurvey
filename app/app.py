@@ -66,7 +66,7 @@ def main():
     img = open("./fortinet-logo.png", "rb").read()
     put_image(img, width='30%')
 
-    info = input_group("Public Cloud Training - After Training Survey", [
+    info = input_group("Fortinet @AWS Immersion Day 2024 - Survey", [
         input("Name", type=TEXT, name='name'),
         input("Email Address*", type=TEXT, validate=checkEmail, name='emailAddress'),
         input("Mobile Number*", type=TEXT, validate=validateMobile, name='mobileNumber'),
